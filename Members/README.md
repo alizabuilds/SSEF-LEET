@@ -10,6 +10,8 @@
 
 اینجا پوشه شخصی خودتون رو بسازید و جواب‌هاتون رو داخلش بگذارید.
 
+**توجه:** مستقیم روی ریپوی اصلی Push نکنید. اول **Fork** کنید، روی فورک خودتان کار کنید، بعد **Pull Request** بزنید. راهنما: [`CONTRIBUTING.md`](../CONTRIBUTING.md)
+
 ```text
 Members/<github-username>/
   Week-01/
@@ -30,6 +32,8 @@ Members/<github-username>/
 ## English
 
 Create your personal folder here and put your solutions inside it.
+
+**Note:** Do not push directly to the main repo. **Fork** first, work on your fork, then open a **Pull Request**. Guide: [`CONTRIBUTING.md`](../CONTRIBUTING.md)
 
 ```text
 Members/<github-username>/

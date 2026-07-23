@@ -14,8 +14,17 @@
 
 هدف این ریپازیتوری فقط آپلود کردن جواب سوال‌ها نیست؛ می‌خوایم یه آرشیو مرتب و تمیز داشته باشیم که هر کسی بتونه بعداً برگرده، راه‌حل‌های بقیه رو ببینه، ایده بگیره و روند پیشرفتش رو هم دنبال کنه.
 
-پس قبل از اینکه اولین Push یا Pull Request خودتون رو انجام بدید، لطفاً این راهنما رو یه بار بخونید.  
-جزئیات مشارکت: [`CONTRIBUTING.md`](./CONTRIBUTING.md)
+پس قبل از اینکه اولین Pull Request خودتون رو باز کنید، لطفاً این راهنما رو یه بار بخونید.
+
+### 🔀 چطور جواب آپلود کنیم؟ (مهم)
+
+این ریپو **Public** است و اعضا مستقیم روی `main` پوش نمی‌زنند.
+
+1. ریپو را **Fork** کنید  
+2. روی **فورک خودتان** جواب را داخل `Members/<github-username>/` بگذارید  
+3. به ریپوی اصلی **Pull Request** بزنید  
+
+جزئیات کامل: [`CONTRIBUTING.md`](./CONTRIBUTING.md)
 
 ---
 
@@ -123,12 +132,12 @@ Week-05/
 - فایل‌های غیرمرتبط داخل ریپو قرار ندید.
 - اگر فکر می‌کنید ساختار نیاز به تغییر داره، اول داخل گروه مطرح کنید.
 
-## ✅ قبل از Push کردن
+## ✅ قبل از باز کردن Pull Request
 
 - کدتون اجرا می‌شه.
-- فایل‌ها داخل پوشه خودتون قرار گرفتن.
+- فایل‌ها فقط داخل پوشه خودتون در **فورک** قرار گرفتن.
 - اسم پوشه‌ها درست نوشته شده (`Week-01`, `Week-02`, …).
-- آخرین تغییرات ریپازیتوری رو Pull کردید.
+- فورکتون را با ریپوی اصلی همگام کردید (`upstream`).
 
 همین چند مورد ساده باعث می‌شه کمتر به Merge Conflict بخوریم.
 
@@ -166,8 +175,17 @@ We’re solving LeetCode problems together about once or twice a week, so we kee
 
 This isn’t only about uploading answers. We want a clean archive you can revisit later — to read other people’s approaches, steal good ideas, and track your own progress.
 
-Please read this guide once before your first push or pull request.  
-Contribution details: [`CONTRIBUTING.md`](./CONTRIBUTING.md)
+Please read this guide once before your first pull request.
+
+### 🔀 How do I upload a solution? (important)
+
+This repo is **public**. Members do **not** push directly to `main`.
+
+1. **Fork** this repository  
+2. On **your fork**, put your solution under `Members/<github-username>/`  
+3. Open a **Pull Request** into the main repo  
+
+Full details: [`CONTRIBUTING.md`](./CONTRIBUTING.md)
 
 ---
 
@@ -265,12 +283,12 @@ A few lines is enough. Template: [`Templates/Solution-README.md`](./Templates/So
 - Commit unrelated files
 - If you think the structure should change, raise it in the group first
 
-## ✅ Before you push
+## ✅ Before opening a Pull Request
 
 - Your code runs
-- Files are only under your own member folder
+- Files are only under your own folder on **your fork**
 - Week folder names match (`Week-01`, `Week-02`, …)
-- You pulled the latest changes
+- Your fork is synced with the main repo (`upstream`)
 
 This keeps merge conflicts down.
 

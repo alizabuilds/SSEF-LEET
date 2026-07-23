@@ -8,32 +8,69 @@
 
 ## فارسی
 
-از اینکه به جامعه ملحق شدید ممنونیم. این قوانین کمک می‌کنن با حدود ۶۰+ نفر، ریپو مرتب بمونه و ریویو ساده‌تر باشه.
+از اینکه به جامعه ملحق شدید ممنونیم. این ریپو **عمومی (Public)** است؛ اعضا **دسترسی مستقیم برای Push روی `main` ندارند**.
 
-### چطور مشارکت کنید
+راه مشارکت رسمی:
 
-1. **یک نفر = یک پوشه** — بسازید: `Members/<github-username>/`
-2. **یک هفته = یک پوشه** — مثلاً `Members/<github-username>/Week-01/` (شماره هفته با `Problems/` یکی باشه)
-3. **README کوتاه** — ترجیحاً از [`Templates/Solution-README.md`](./Templates/Solution-README.md) استفاده کنید
-4. **Pull Request باز کنید** — بگید کدوم هفته رو حل کردید و با چه زبانی
+**Fork → تغییرات روی فورک خودتون → Pull Request به همین ریپو**
 
-### جریان پیشنهادی (Git)
+### مراحل قدم‌به‌قدم
 
-```text
-1. git pull
-2. کارتون رو فقط داخل Members/<username>/ انجام بدید
-3. git add / commit
-4. Push و Pull Request
+1. روی صفحه ریپوی اصلی دکمه **Fork** را بزنید (یک کپی زیر اکانت خودتان ساخته می‌شود).
+2. فورک خودتان را Clone کنید:
+
+```bash
+git clone https://github.com/<YOUR-USERNAME>/SSEF-LEET.git
+cd SSEF-LEET
 ```
 
-اگر به ریپو دسترسی مستقیم ندارید: Fork → تغییرات → Pull Request به همین ریپو.
+3. (پیشنهادی) ریپوی اصلی را به‌عنوان `upstream` اضافه کنید تا بتوانید آپدیت بگیرید:
+
+```bash
+git remote add upstream https://github.com/ArminShaikhy/SSEF-LEET.git
+```
+
+4. قبل از کار جدید، فورک را با ریپوی اصلی همگام کنید:
+
+```bash
+git fetch upstream
+git checkout main
+git merge upstream/main
+```
+
+5. فقط داخل پوشه خودتان کار کنید:
+
+```text
+Members/<github-username>/
+  Week-01/
+    solution.<ext>
+    README.md
+```
+
+6. Commit و Push روی **فورک خودتان**:
+
+```bash
+git add Members/<github-username>/
+git commit -m "feat(<username>): Week-01 Fizz Buzz"
+git push origin main
+```
+
+7. در GitHub روی فورک خودتان **Open pull request** بزنید و PR را به  
+   `ArminShaikhy/SSEF-LEET` → شاخه `main` بفرستید.
+
+### قوانین مهم
+
+1. **یک نفر = یک پوشه** — `Members/<github-username>/`
+2. **یک هفته = یک پوشه** — شماره هفته با `Problems/` یکی باشد
+3. **README کوتاه** — ترجیحاً از [`Templates/Solution-README.md`](./Templates/Solution-README.md)
+4. ترجیحاً **هر PR مربوط به یک هفته** باشد
 
 ### انجام بدید / انجام ندید
 
 | انجام بدید | انجام ندید |
 | --- | --- |
 | فقط داخل پوشه خودتون تغییر بدید | فایل/پوشه بقیه رو دست نزنید |
-| به سوال داخل `Problems/` رجوع کنید | ساختار ریپو رو بدون هماهنگی عوض نکنید |
+| از Fork + Pull Request استفاده کنید | مستقیم روی ریپوی اصلی Push نکنید |
 | پیام کامیت واضح بنویسید | فایل‌های غیرمرتبط، باینری، یا secret نذارید |
 | در ریویو محترمانه باشید | روش بقیه رو تمسخر نکنید |
 
@@ -43,8 +80,6 @@
 
 - `feat(soohimi): Week-01 Fizz Buzz`
 - `fix(sara): Week-01 Fizz Buzz`
-
-ترجیحاً هر PR مربوط به **یک هفته** باشه تا ریویو سریع‌تر انجام بشه.
 
 ### اضافه کردن سوال جدید (فقط ادمین)
 
@@ -64,32 +99,69 @@ Problems/YYYY/Week-XX-Problem-Name/
 
 ## English
 
-Thanks for joining. These rules keep the repo tidy for 60+ members and make reviews easier.
+Thanks for joining. This repository is **public**. Members do **not** push directly to `main` on the main repo.
 
-### How to contribute
+The official contribution path is:
 
-1. **One person = one folder** — Create `Members/<github-username>/`
-2. **One week = one folder** — e.g. `Members/<github-username>/Week-01/` (week number must match `Problems/`)
-3. **Short README** — Prefer [`Templates/Solution-README.md`](./Templates/Solution-README.md)
-4. **Open a Pull Request** — Say which week you solved and which language you used
+**Fork → work on your fork → open a Pull Request into this repo**
 
-### Suggested Git flow
+### Step by step
 
-```text
-1. git pull
-2. Work only under Members/<username>/
-3. git add / commit
-4. Push and open a Pull Request
+1. Click **Fork** on the main repo page (creates a copy under your account).
+2. Clone **your fork**:
+
+```bash
+git clone https://github.com/<YOUR-USERNAME>/SSEF-LEET.git
+cd SSEF-LEET
 ```
 
-If you don’t have direct write access: Fork → change → PR into this repo.
+3. (Recommended) Add the original repo as `upstream` so you can sync:
+
+```bash
+git remote add upstream https://github.com/ArminShaikhy/SSEF-LEET.git
+```
+
+4. Before new work, sync your fork with the main repo:
+
+```bash
+git fetch upstream
+git checkout main
+git merge upstream/main
+```
+
+5. Work only under your own folder:
+
+```text
+Members/<github-username>/
+  Week-01/
+    solution.<ext>
+    README.md
+```
+
+6. Commit and push to **your fork**:
+
+```bash
+git add Members/<github-username>/
+git commit -m "feat(<username>): Week-01 Fizz Buzz"
+git push origin main
+```
+
+7. On GitHub, open a **Pull Request** from your fork into  
+   `ArminShaikhy/SSEF-LEET` → `main`.
+
+### Rules
+
+1. **One person = one folder** — `Members/<github-username>/`
+2. **One week = one folder** — week number must match `Problems/`
+3. **Short README** — Prefer [`Templates/Solution-README.md`](./Templates/Solution-README.md)
+4. Prefer **one week per PR**
 
 ### Do / Don’t
 
 | Do | Don’t |
 | --- | --- |
 | Change only your own member folder | Edit other members’ files |
-| Reference the problem under `Problems/` | Change repo structure without discussion |
+| Use Fork + Pull Request | Push directly to the main repository |
 | Write clear commit messages | Commit unrelated files, binaries, or secrets |
 | Be respectful in reviews | Mock other people’s approaches |
 
@@ -99,8 +171,6 @@ Examples:
 
 - `feat(soohimi): Week-01 Fizz Buzz`
 - `fix(sara): Week-01 Fizz Buzz`
-
-Prefer **one week per PR** when possible.
 
 ### Adding a new weekly problem (admins)
 
